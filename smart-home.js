@@ -12,6 +12,24 @@
 */
 
 // Add code here
+function createSignalFactory(device) {
+
+    switch(device.toLowerCase()) {
+        case 'tv':
+            break;
+        case 'aircon':
+            break;
+        case 'door':
+            break;
+    }
+    return {
+        send() {
+            console.log(`Send signal to ${device}`);
+        }
+    }
+}
+createSignalFactory('tv');
+
 
 let signal = createSignalFactory('tv');
 signal.send(); // "Send tv signal"
